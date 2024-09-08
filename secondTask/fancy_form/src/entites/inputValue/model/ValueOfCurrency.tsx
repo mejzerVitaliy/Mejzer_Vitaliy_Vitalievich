@@ -2,9 +2,6 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { setSelectedValue } from '../slice/selectedValueSlice'
 
-interface ValueOfCurrency {
-    value: number
-}
 
 const ValueOfCurrency: React.FC = () => {
     const dispatch = useDispatch()

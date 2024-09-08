@@ -45,7 +45,7 @@ const SelectCurrencyModal: React.FC<ModalProps> = ({ currencies }) => {
                 </article>
 
                 {filteredCurrencies?.map((currency: Currency) => (
-                    selectedIntoCurrency != currency &&
+                    selectedIntoCurrency !== currency &&
                         <article
                             key={Math.random()*990000000000000}
                             onClick={() => {
