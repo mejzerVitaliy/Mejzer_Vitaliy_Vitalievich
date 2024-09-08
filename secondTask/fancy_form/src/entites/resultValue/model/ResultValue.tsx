@@ -15,11 +15,15 @@ const ResultValue: React.FC = () => {
 
     if (resultValue) {
         return (
-            <section className='w-full mt-[50px] grid place-items-center'>
-                <h2 className='font-black text-[40px] '>Result: <u><b><strong>{ resultValue }</strong></b></u> </h2>
+            <section className='w-full mt-[50px] lg:mt-[40px] grid place-items-center text-center'>
+                <h2 className='font-black text-[20px] sm:text-[26px] lg:text-[30px] xl:text-[36px] '>Result: <u><b><strong>{ resultValue }</strong></b></u> </h2>
             </section> 
         )
-    } else return null
+    } else return (
+        <section className='w-full mt-[50px] lg:mt-[40px] grid place-items-center'>
+            <h2 className='font-black text-[24px] sm:text-[26px] lg:text-[30px] xl:text-[36px] '>Here will be the result.</h2>
+        </section> 
+    ) 
     
 }
 

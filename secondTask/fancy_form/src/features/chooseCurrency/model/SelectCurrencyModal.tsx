@@ -24,7 +24,7 @@ const SelectCurrencyModal: React.FC<ModalProps> = ({ currencies }) => {
 
     const filterOfCurrency = (searchQuery: string | null, currencies: Currency[]) => {
         if (searchQuery) {
-            setFilteredCurrencies(currencies.filter((currency) => currency.currency.toLowerCase().includes(searchQuery.toLowerCase())) || <h3>This currency is not found.</h3>)
+            setFilteredCurrencies(currencies.filter((currency) => currency.currency.toLowerCase().includes(searchQuery.toLowerCase())))
         }  else setFilteredCurrencies(currencies)
     }
 
@@ -35,9 +35,9 @@ const SelectCurrencyModal: React.FC<ModalProps> = ({ currencies }) => {
     return (
         <main
             onClick={(e) => closeModal(e)}
-            className="w-full h-full fixed top-0 z-10 grid place-items-center bg-[#000000ad] animate-[modalBackgroundAnimation_0.3s_ease-in-out_1]"
+            className="w-full h-full fixed top-0 z-10 grid place-items-center bg-[#000000cb] animate-[modalBackgroundAnimation_0.3s_ease-in-out_1]"
         >
-            <section className="w-[900px] h-[600px] rounded-l-3xl relative p-[16px] bg-orange-400 flex flex-col items-center overflow-y-auto animate-[modalAnimation_0.3s_ease-in-out_1]">
+            <section className="w-[280px] sm:w-[600px]  h-[500px] xl:h-[600px] rounded-xl relative p-[12px] bg-orange-400 flex flex-col items-center overflow-y-auto animate-[modalAnimation_0.3s_ease-in-out_1]">
                 
                 <article className='w-full flex flex-col items-center'>
                     <Searcher />
@@ -47,14 +47,14 @@ const SelectCurrencyModal: React.FC<ModalProps> = ({ currencies }) => {
                 {filteredCurrencies?.map((currency: Currency) => (
                     selectedIntoCurrency != currency &&
                         <article
-                            key={currency.price}
+                            key={Math.random()*990000000000000}
                             onClick={() => {
                                 dispatch(setSelectedCurrency(currency))
                                 dispatch(toggleOpenModal())
                             }}
-                            className="w-[80%] h-[100px] grid place-items-center my-[8px] rounded-xl text-center hover:bg-[#a1a1a1a1] cursor-pointer border border-solid border-black"
+                            className="w-[80%] h-[40px] grid place-items-center my-[4px] rounded-xl text-[16px] sm:text-[20px] lg:text-[24px] text-center hover:bg-[#a1a1a1a1] cursor-pointer border border-solid border-black"
                         >
-                            <strong>{currency.currency} - {currency.price}</strong>
+                            <strong>{currency.currency} - {currency.price.toString().length >= 10 ? `${currency.price.toString().slice(0, 10)}...` : currency.price}</strong>
                         </article>
                 ))}
             </section>

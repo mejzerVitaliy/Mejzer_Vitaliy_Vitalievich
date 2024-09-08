@@ -10,13 +10,13 @@ const ValueOfCurrency: React.FC = () => {
     const dispatch = useDispatch()
 
     return (
-        <section className='w-full my-[20px] flex justify-center items-center'>
-            <h2>Lastly, input your value: </h2>
+        <section className='w-full my-[20px] lg:my-[40px] flex justify-center items-center'>
+            <h2 className='text-[14px] sm:text-[16px] lg:text-[18px] xl:text-[22px]'>Lastly, input your value: </h2>
             <input
                 type="number"
                 onChange={(e) => dispatch(setSelectedValue(+e.target.value))}
                 min={0}
-                className='bg-[#181818] text-center font-karla ml-[12px] px-[16px] rounded-2xl'
+                className='w-[70px] sm:w-[150px] lg:w-[200px] xl:w-[250px] bg-[#181818] text-[14px] sm:text-[16px] lg:text-[18px] xl:text-[22px]  text-center font-karla ml-[8px] px-[8px] rounded-2xl'
             />
         </section>
     )
