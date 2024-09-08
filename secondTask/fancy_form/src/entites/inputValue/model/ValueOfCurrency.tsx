@@ -8,7 +8,7 @@ const ValueOfCurrency: React.FC = () => {
 
     return (
         <section className='w-full my-[20px] lg:my-[40px] flex justify-center items-center'>
-            <h2 className='text-[14px] sm:text-[16px] lg:text-[18px] xl:text-[22px]'>Lastly, input your value: </h2>
+            <h2 className='text-[14px] sm:text-[16px] lg:text-[18px] xl:text-[22px]'> <strong>Lastly, input your value:</strong> </h2>
             <input
                 type="number"
                 onChange={(e) => dispatch(setSelectedValue(+e.target.value))}

@@ -12,7 +12,7 @@ const Exchanger: React.FC = () => {
     const selectedIntoCurrency = useSelector((state: RootState) => state.selectedIntoCurrency.selectedCurrency)
 
     return (
-        <main className="w-[280px] sm:w-[600px] lg:w-[700px] xl:w-[900px] h-[400px] lg:h-[450px] xl:h-[500px] p-[16px] text-white font-rubik  rounded-[20px] bg-orange-500">
+        <main className="w-[280px] sm:w-[600px] lg:w-[700px] xl:w-[900px] h-[400px] lg:h-[450px] xl:h-[500px] p-[16px] text-white font-rubik  rounded-[20px] bg-[#ac7001] border ">
             <section className="text-center h-[150px] lg:h-[200px] flex flex-col justify-between">
                 <article>
                     <h2 className="text-[20px] sm:text-[26px] lg:text-[30px] xl:text-[36px] font-bold">Select currencies</h2>

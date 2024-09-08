@@ -5,6 +5,7 @@ import { toggleOpenModal } from "../slices/openModalSlice";
 import { setSelectedCurrency } from "../slices/selectedCurrensySlice";
 import Searcher from "../../searchCurrency/model/Searcher";
 import { RootState } from "../../../app/providers/store";
+import { setSearchQuery } from "../../searchCurrency/slice/searchSlice";
 
 interface ModalProps {
     currencies: Currency[];
@@ -37,7 +38,7 @@ const SelectCurrencyModal: React.FC<ModalProps> = ({ currencies }) => {
             onClick={(e) => closeModal(e)}
             className="w-full h-full fixed top-0 z-10 grid place-items-center bg-[#000000cb] animate-[modalBackgroundAnimation_0.3s_ease-in-out_1]"
         >
-            <section className="w-[280px] sm:w-[600px]  h-[500px] xl:h-[600px] rounded-xl relative p-[12px] bg-orange-400 flex flex-col items-center overflow-y-auto animate-[modalAnimation_0.3s_ease-in-out_1]">
+            <section className="w-[280px] sm:w-[600px]  h-[500px] xl:h-[600px] rounded-xl relative p-[12px] bg-[#ac7001] flex flex-col items-center overflow-y-auto animate-[modalAnimation_0.3s_ease-in-out_1]">
                 
                 <article className='w-full flex flex-col items-center'>
                     <Searcher />
@@ -51,6 +52,7 @@ const SelectCurrencyModal: React.FC<ModalProps> = ({ currencies }) => {
                             onClick={() => {
                                 dispatch(setSelectedCurrency(currency))
                                 dispatch(toggleOpenModal())
+                                dispatch(setSearchQuery(null))
                             }}
                             className="w-[80%] h-[40px] grid place-items-center my-[4px] rounded-xl text-[16px] sm:text-[20px] lg:text-[24px] text-center hover:bg-[#a1a1a1a1] cursor-pointer border border-solid border-black"
                         >

@@ -10,7 +10,7 @@ export const searchSlice = createSlice({
     name: 'searchQuery',
     initialState,
     reducers: {
-        setSearchQuery: (state, action: PayloadAction<string>) => {
+        setSearchQuery: (state, action: PayloadAction<string | null>) => {
             state.query = action.payload
         }
     }
