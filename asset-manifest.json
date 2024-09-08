@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Mejzer_Vitaliy_Vitalievich/fancy_form/static/css/main.db2a7149.css",
+    "main.js": "/Mejzer_Vitaliy_Vitalievich/fancy_form/static/js/main.53aae9b8.js",
+    "static/media/bg-img.webp": "/Mejzer_Vitaliy_Vitalievich/fancy_form/static/media/bg-img.010e1e8f4b346956919b.webp",
+    "index.html": "/Mejzer_Vitaliy_Vitalievich/fancy_form/index.html",
+    "main.db2a7149.css.map": "/Mejzer_Vitaliy_Vitalievich/fancy_form/static/css/main.db2a7149.css.map",
+    "main.53aae9b8.js.map": "/Mejzer_Vitaliy_Vitalievich/fancy_form/static/js/main.53aae9b8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.db2a7149.css",
+    "static/js/main.53aae9b8.js"
+  ]
+}
